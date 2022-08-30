@@ -198,10 +198,15 @@
 // Exercise 3
 
 
-a = +prompt("1 = ");
-b = +prompt("2 = ");
-c = +prompt("3 = ");
-function number(a,  b, c) {
-    number = a + b + c;
-}
-alert(number)
+// a = +prompt("1 = ");
+// b = +prompt("2 = ");
+// c = +prompt("3 = ");
+// function number(a,  b, c) {
+//     number = a  b   c;
+// }
+// alert(number)
+//  крч не знаю
+
+
+// Exercise 4
+//  как я понял функции еще сложноваты
