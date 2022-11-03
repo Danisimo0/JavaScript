@@ -173,7 +173,128 @@
 
 
 
-// Exercise 1 
+setTimeout(function() {
+    var hi = prompt("Здравствуйте, ниже набираем номер задания, например 11")
+    if (hi == "1") {
+        let one = +prompt('Введите первое число');
+        let two = +prompt('Введите второе число');
+        if (one==two) {
+            alert("0")
+        } else if (one>two) {
+            alert("1")
+        } else if (one<two) {
+            alert("-1")
+        }
+
+
+
+
+    } else if (hi == "2") {
+        let one = +prompt('Введите число');
+        function factorial(n) {
+        return (n != 1) ? n * factorial(n - 1) : 1;
+        }
+        alert( "Его факториал равен " + factorial(one));
+
+
+
+
+
+    } else if (hi == "3") {
+        let one = prompt('Введите три числа через пробел, пример:1 2 3');
+        alert("Ваше число: " + (one.replace(/ /g,'')))
+
+
+
+
+
+
+    } else if (hi == "4") {
+        let one = +prompt('Введите первую сторону фигуры');
+        let two = +prompt('Введите вторую сторону фигуры(если квадрат введите 1)');
+        if (two == 1) {
+            alert("Квадрат равен " + (one*one))
+        } else {
+            alert("Прямоугольник равен " + (one*two))
+        }
+
+
+
+
+
+
+    } else if (hi == "5") {
+        let one = +prompt('Введите число');
+        let x = one
+        let i = 0
+        while (x != 1) {
+        
+        x--
+        if (one%x==0) {
+            i+=x
+        }
+
+        
+        }
+        if (one == i) {
+            alert("Это число Совершенное число")
+        } else {
+            alert("Это число НЕ совершенное число")
+        }
+
+
+
+
+
+
+    } else if (hi == "6") {
+        let start = +prompt('Введите начало диапазона');
+        let end = +prompt('Введите конец диапазона');
+        while (start != end) {
+            let one = start
+            let x = one
+            let i = 0
+            while (x != 1) {
+            
+            x--
+            if (one%x==0) {
+                i+=x
+            }
+
+            
+            }
+            if (one == i) {
+                alert("Это число Совершенное число: " + one)
+            }	
+            start ++
+        }
+
+
+
+
+
+        
+    } else if (hi == "7") {
+        let hour = +prompt('Введите количество часов');
+        let minute = +prompt('Введите количество минут');
+        let second = +prompt('Введите количество секунд');
+        alert("Сейчас время: "+ hour + ":" + minute + ":" + second)
+
+
+    } else if (hi == "8") {
+        let hour = +prompt('Введите количество часов');
+        let minute = +prompt('Введите количество минут');
+        let second = +prompt('Введите количество секунд');
+        if (hour == "") {
+            hour = "00"
+        }
+        if (minute == "") {
+            minute = "00"
+        }
+        if (second == "") {
+            second = "00"
+        }
+        alert("Сейчас время: "+ hour + ":" + minute + ":" + second)
 
 
 
@@ -182,31 +303,53 @@
 
 
 
-// Exercise 2
+
+
+    } else if (hi == "9") {
+        let hour = +prompt('Введите количество часов');
+        let minute = +prompt('Введите количество минут');
+        let second = +prompt('Введите количество секунд');
+        second = second + (minute*60) + (hour*360)
+        alert("Сейчас время: "+ second + " секунд времени")
 
 
 
-// function factorial(n) {
-//     return (n != 1) ? n * factorial(n - 1) : 1;
-//   }
-   
-//   alert( factorial(5) )
 
 
 
-
-// Exercise 3
-
-
-// a = +prompt("1 = ");
-// b = +prompt("2 = ");
-// c = +prompt("3 = ");
-// function number(a,  b, c) {
-//     number = a  b   c;
-// }
-// alert(number)
-//  крч не знаю
+    } else if (hi == "10") {
+        let second_minute_hour = +prompt('Введите количество секунд');
+        let hour = Math.floor(second_minute_hour/360);
+        let minute = Math.floor((second_minute_hour - (360*hour))/60);
+        let second = (second_minute_hour - (360*hour) - (minute*60))
+        alert("Сейчас время: "+ hour + ":" + minute + ":" + second)
 
 
-// Exercise 4
-//  как я понял функции еще сложноваты
+    
+
+
+
+    } else if (hi == "11") {
+        let hour1 = +prompt('Введите количество часов');
+        let minute1 = +prompt('Введите количество минут');
+        let second1 = +prompt('Введите количество секунд');
+        let hour2 = +prompt('Введите количество часов');
+        let minute2 = +prompt('Введите количество минут');
+        let second2 = +prompt('Введите количество секунд');
+
+        second1 = second1 + (minute1*60) + (hour1*360);
+        second2 = second2 + (minute2*60) + (hour2*360);
+        let second_minute_hour;
+
+        if (second1 > second2) {
+            second_minute_hour = second1 - second2;
+        } else {
+            second_minute_hour = second2 - second1;
+        }
+        
+        let hour = Math.floor(second_minute_hour/360);
+        let minute = Math.floor((second_minute_hour - (360*hour))/60);
+        let second = (second_minute_hour - (360*hour) - (minute*60))
+        alert("Разница времени: "+ hour + ":" + minute + ":" + second)
+    }
+}, (1000));
