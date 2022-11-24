@@ -153,3 +153,8 @@ sdfdsf
 // Math.round() округление до билжайшего 12.4 ~ 12; 12.5 ~ 13
 // Math.floor() округление до меньшего 12.1 ~ 12; 12.9 ~ 12;
 // Math.ceil() округление до большего 12.1 ~ 13; 12.8 ~ 13;
+document.querySelector("button").onclick = myClick;
+function myClick(){
+    let a = document.querySelector(".a").value;
+    console.log(a);
+}
